@@ -1,0 +1,70 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+/* General container styling */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  height: 100vh;
+  background-color: black;
+  padding: 50px;
+}
+
+/* Card styling */
+.card {
+  flex: 1;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  transition: flex 0.5s ease-in-out, transform 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  filter: brightness(100%);
+}
+
+.card.expanded {
+  flex: 3;
+  transform: scale(1.0);
+}
+
+/* Title styling */
+.title {
+  color: rgb(252, 251, 253);
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 1;
+  filter: brightness(200%);
+
+}
+.container>:is(:first-child,:nth-child(2)){
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+
+}
+.container>:is(:nth-child(2)){
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+
+}
+.container>:nth-child(2){
+  border-top-left-radius: 0px;
+}
+.container:last-child{
+  border-top-left-radius: 0px;
+  border-bottom-right-radius:0px ;
+}
